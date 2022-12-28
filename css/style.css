@@ -13,6 +13,7 @@
 body {
   align-items: center;
   justify-content: center;
+  min-height: 200vh;
 }
 
 .logo {
@@ -487,7 +488,7 @@ button a {
 
 @media (max-width: 700px) {
   body {
-    margin: 0 20px 0 5px;
+    margin: 0 20px 0 20px;
   }
   ul {
     display: none;
