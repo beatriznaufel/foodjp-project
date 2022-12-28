@@ -74,6 +74,7 @@ a {
 #hero {
   padding-top: 250px;
   padding-left: 280px;
+  position: relative;
 }
 
 .hero-container {
@@ -114,8 +115,9 @@ a {
   border: none;
   font-family: "Inter";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 24px;
+  cursor: pointer;
 
   width: 292px;
   height: 60px;
@@ -124,12 +126,15 @@ a {
 }
 
 .hero-image img {
-  float: right;
   margin-top: -400px;
-  margin-right: 320px;
+  margin-left: 55rem;
 }
 
 #recipe-dish {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 100px;
   padding-top: 300px;
   padding-left: 265px;
 }
@@ -141,8 +146,7 @@ a {
 }
 
 .recipe-text {
-  float: right;
-  margin-top: -400px;
+  margin-top: 0px;
   margin-right: 270px;
 }
 
@@ -171,7 +175,7 @@ a {
   margin-bottom: 30px;
 }
 
-#recipe-dish span {
+#recipe-dish a {
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
@@ -262,9 +266,7 @@ img .card-dish {
   text-align: center;
   margin-top: 160px;
   margin-bottom: 60px;
-}
 
-.reviews-text h1 {
   width: 318px;
   height: 59px;
   left: 346px;
@@ -355,7 +357,7 @@ img .card-dish {
   padding-left: 2rem;
   background: #fbfbfb;
   border-radius: 1rem;
-  min-height: 7rem;
+  min-height: 3rem;
   height: auto;
   border: 0.1rem solid #292929;
   border-right: none;
@@ -415,7 +417,7 @@ input[type="text"]::placeholder {
   font-weight: 500;
   font-size: 24px;
   line-height: 123%;
-  height: 7rem;
+  height: 7.2rem;
   width: 18rem;
   cursor: pointer;
   transition: all 0.3s;
@@ -474,7 +476,16 @@ button a {
 }
 
 /* MEDIAS */
-@media (max-width: 575px) {
+@media (max-width: 600px) {
+  .hero-image img {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    margin: 0 20px 0 20px;
+  }
   nav {
     display: none;
   }
@@ -486,7 +497,7 @@ button a {
   }
   #hero {
     padding-top: 100px;
-    padding-left: 0px;
+    padding-left: 0;
   }
   #hero h1 {
     width: 270px;
@@ -508,10 +519,11 @@ button a {
     left: 24px;
     top: 303px;
   }
-  .hero-image img {
-    display: none;
-  }
   #recipe-dish {
+    display: block;
+    align-items: center;
+    gap: 0px;
+    margin-bottom: 100px;
     padding-top: 48px;
     padding-left: 0px;
   }
@@ -541,19 +553,16 @@ button a {
     text-align: center;
     margin-bottom: 24px;
   }
-  #recipe-dish span {
+  #recipe-dish a {
     width: 262px;
     height: 19px;
     font-size: 16px;
     line-height: 19px;
-    text-align: center;
+    margin-left: 20px;
   }
   .popular-dishes-text h1 {
-    width: 187px;
     font-size: 24px;
-    text-align: center;
     margin-top: 56px;
-    margin-left: 87px;
     margin-bottom: 80px;
   }
 
@@ -564,7 +573,9 @@ button a {
 
   .cards {
     display: block;
-    margin-right: 0;
+    align-items: center;
+    justify-content: center;
+    margin-left: -23px;
   }
 
   .card {
@@ -572,14 +583,133 @@ button a {
     height: 401.29px;
     margin-bottom: 118px;
   }
+  .dish-name {
+    font-size: 24px;
+  }
+
+  .dish-price {
+    font-size: 32px;
+  }
+  #reviews {
+    margin-left: 0px;
+  }
+  .reviews-text h1 {
+    align-items: center;
+    text-align: center;
+    margin-top: 56px;
+    margin-bottom: 40px;
+    font-size: 24px;
+  }
+
+  .all-reviews {
+    display: block;
+    margin: -20px;
+  }
+
+  .first-review-bg,
+  .second-review-bg {
+    background: #f3f3f3;
+    border-radius: 16px;
+    margin-bottom: 28px;
+  }
+
+  .first-review,
+  .second-review {
+    align-items: center;
+    padding: 40px 50px 50px 40px;
+  }
+
+  .img-review {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+  }
+
+  .first-review h2,
+  .second-review h2 {
+    font-size: 18px;
+    margin-top: 16px;
+    text-align: center;
+  }
+
+  .first-review p,
+  .second-review p {
+    font-size: 16px;
+    width: 270px;
+    margin-top: 16px;
+    text-align: center;
+    margin: 0;
+  }
+
+  .second-review p {
+    margin-bottom: 16px;
+  }
+
+  .all-stars {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55%;
+  }
+
+  #location {
+    margin: 0;
+  }
+
+  #location h1 {
+    font-size: 24px;
+    line-height: 123%;
+    text-align: center;
+    margin-top: 56px;
+    margin-bottom: 24px;
+  }
+
+  #location .search-local {
+    margin-left: 0px;
+  }
+
+  .location-map {
+    width: 340px;
+    margin-left: -10px;
+    height: 230px;
+    border-radius: 8px;
+    margin-bottom: 56px;
+  }
 
   .search-local {
-    padding-left: 0;
+    width: 100%;
+    height: 3rem;
+    display: flex;
     column-gap: 0.25rem;
+    padding-left: 0.25rem;
+    background: #fbfbfb;
+    border-radius: 1rem;
+    border: 0.1rem solid #292929;
+    border-right: none;
+  }
+
+  .search-local input {
+    width: 200px;
+    height: 30px;
+    max-width: 30rem;
+    align-items: center;
+    column-gap: 0.25rem;
+    padding-left: 0.5rem;
+    margin-bottom: 0.8rem;
   }
 
   .search-local button {
+    height: 3.2rem;
     width: 10rem;
+    padding: 15px;
+  }
+
+  .icon {
+    font-size: 2rem;
+    margin-left: 1rem;
   }
 
   button a {
@@ -590,10 +720,54 @@ button a {
     display: block;
     margin-inline: auto;
     color: #fbfbfb;
-    font-size: 3rem;
+    font-size: 1.5rem;
   }
 
   input[type="text"]::placeholder {
-    font-size: 1.7rem;
+    font-size: 12px;
+  }
+
+  #footer {
+    margin: 0;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .logo-footer {
+    width: 94px;
+    height: 29px;
+    margin-top: 56px;
+    margin-bottom: 20px;
+  }
+
+  .footer-container {
+    display: block;
+  }
+
+  .about {
+    grid-column: 1;
+    margin-bottom: 56px;
+  }
+
+  .services {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .footer-texts {
+    display: block;
+    margin-top: 32px;
+    display: grid;
+    gap: 40px;
+  }
+
+  .footer-texts h2 {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .footer-texts p {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 8px;
   }
 }
