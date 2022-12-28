@@ -13,7 +13,6 @@
 body {
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
 }
 
 .logo {
@@ -42,6 +41,10 @@ ul {
 nav {
   display: flex;
   gap: 15rem;
+}
+
+.menu-mobile img {
+  display: none;
 }
 
 .login-btn {
@@ -484,16 +487,25 @@ button a {
 
 @media (max-width: 700px) {
   body {
-    margin: 0 20px 0 20px;
+    margin: 0 20px 0 5px;
   }
-  nav {
+  ul {
     display: none;
   }
+
+  nav button {
+    display: none;
+  }
+  
+  .menu-mobile img {
+    display: block;
+  }
+
   .logo {
     width: 71px;
     height: 22px;
-    margin-left: 0;
-    margin-right: 17rem;
+    margin-left: 0rem;
+    margin-right: 14.5rem;
   }
   #hero {
     padding-top: 100px;
