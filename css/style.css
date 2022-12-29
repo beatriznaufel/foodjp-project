@@ -37,11 +37,20 @@ ul {
   gap: 91px;
   margin-top: 8px;
   margin-right: 40px;
+  background-color: #fff;
 }
 
 nav {
   display: flex;
   gap: 15rem;
+}
+
+nav ul.active {
+  left: 0;
+}
+
+#ham-menu {
+  display: none;
 }
 
 .menu-mobile img {
@@ -480,6 +489,49 @@ button a {
 }
 
 /* MEDIAS */
+
+@media only screen and (max-width: 767px) {
+  #header {
+    position: static;
+  }
+  #ham-menu {
+    display: block;
+  }
+  ul li {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 20px;
+    color: white;
+  }
+  a {
+    color: white;
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  nav ul {
+    background-color: black;
+    position: fixed;
+    left: -100vw;
+    top: 73.6px;
+    width: 100vw;
+    height: calc(100vh - 73.6px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 1s;
+    gap: 0;
+    z-index: 30;
+    overflow: scroll;
+  }
+}
+@media only screen and (max-width: 575px) {
+  nav ul {
+    top: 65.18px;
+    height: calc(100vh - 65.18px);
+  }
+}
+
 @media (max-width: 600px) {
   .hero-image img {
     display: none;
@@ -489,15 +541,17 @@ button a {
 @media (max-width: 700px) {
   body {
     margin: 0 20px 0 20px;
+    overflow-x: hidden;
   }
+
   ul {
     display: none;
   }
 
-  nav button {
+  .login-btn {
     display: none;
   }
-  
+
   .menu-mobile img {
     display: block;
   }
@@ -507,7 +561,9 @@ button a {
     height: 22px;
     margin-left: 0rem;
     margin-right: 14.5rem;
+    position: sticky;
   }
+
   #hero {
     padding-top: 100px;
     padding-left: 0;
