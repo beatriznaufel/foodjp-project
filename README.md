@@ -9,3 +9,4 @@ The design was made by [Iuri Silva](https://www.figma.com/file/Yb9IBH56g7T1hdIyZ
 
 - HTML
 - CSS
+- JavaScript
