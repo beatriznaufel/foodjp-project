@@ -491,9 +491,7 @@ button a {
 /* MEDIAS */
 
 @media only screen and (max-width: 767px) {
-  #header {
-    position: static;
-  }
+  
   #ham-menu {
     display: block;
   }
@@ -504,18 +502,18 @@ button a {
     color: white;
   }
   a {
-    color: white;
+    color: black;
   }
   .overflow-hidden {
     overflow: hidden;
   }
   nav ul {
-    background-color: black;
+    background-color: white;
     position: fixed;
     left: -100vw;
     top: 73.6px;
     width: 100vw;
-    height: calc(100vh - 73.6px);
+    height: 50vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -523,6 +521,7 @@ button a {
     gap: 0;
     z-index: 30;
     overflow: scroll;
+
   }
 }
 @media only screen and (max-width: 575px) {
@@ -556,12 +555,18 @@ button a {
     display: block;
   }
 
+  #header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+
   .logo {
     width: 71px;
     height: 22px;
     margin-left: 0rem;
     margin-right: 14.5rem;
-    position: sticky;
   }
 
   #hero {

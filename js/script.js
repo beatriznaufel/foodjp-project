@@ -1,17 +1,18 @@
 let hamMenuIcon = document.getElementById("ham-menu");
 let navBar = document.getElementById("navbar");
 let navLinks = navBar.querySelectorAll("li");
-let body = document.querySelector("body");
+let container = document.querySelector("body");
 
 hamMenuIcon.addEventListener("click", () => {
   navBar.classList.toggle("active");
-  body.classList.toggle("overflow-hidden");
+  container.classList.toggle("overflow-hidden");
   hamMenuIcon.classList.toggle("fa-times");
+  container.classList.toggle('menu-open');
 });
 navLinks.forEach((navLinks) => {
   navLinks.addEventListener("click", () => {
     navBar.classList.remove("active");
-    body.classList.remove("overflow-hidden");
+    container.classList.remove("overflow-hidden");
     hamMenuIcon.classList.toggle("fa-times");
   });
 });
